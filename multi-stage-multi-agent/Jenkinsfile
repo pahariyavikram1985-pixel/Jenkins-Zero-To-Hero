@@ -19,7 +19,7 @@ pipeline {
     }
     stage('DB') {
       agent {
-        docker { image 'oracle:latest' }
+        docker { image 'mysql:latest' }
       }
       steps {
         sh 'select * from temp_table'
